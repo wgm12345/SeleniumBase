@@ -158,7 +158,7 @@ setup(
         'filelock>=3.13.3;python_version>="3.8"',
         'platformdirs>=4.0.0;python_version<"3.8"',
         'platformdirs>=4.2.0;python_version>="3.8"',
-        'typing-extensions>=4.10.0;python_version>="3.8"',
+        'typing-extensions>=4.11.0;python_version>="3.8"',
         'parse>=1.20.1',
         'parse-type>=0.6.2',
         'pyyaml>=6.0.1',
@@ -182,7 +182,8 @@ setup(
         'cssselect==1.2.0',
         "sortedcontainers==2.4.0",
         'fasteners==0.19',
-        'execnet==2.0.2',
+        'execnet==2.0.2;python_version<"3.8"',
+        'execnet==2.1.0;python_version>="3.8"',
         'iniconfig==2.0.0',
         'pluggy==1.2.0;python_version<"3.8"',
         'pluggy==1.4.0;python_version>="3.8"',
@@ -219,17 +220,17 @@ setup(
         # Usage: pytest --alluredir=allure_results
         # Serve: allure serve allure_results
         "allure": [
-            'allure-pytest==2.13.4',
-            'allure-python-commons==2.13.4',
-            'allure-behave==2.13.4',
+            'allure-pytest>=2.13.5',
+            'allure-python-commons>=2.13.5',
+            'allure-behave>=2.13.5',
         ],
         # pip install -e .[coverage]
         # Usage: coverage run -m pytest; coverage html; coverage report
         "coverage": [
             'coverage==7.2.7;python_version<"3.8"',
-            'coverage==7.4.4;python_version>="3.8"',
+            'coverage>=7.4.4;python_version>="3.8"',
             'pytest-cov==4.1.0;python_version<"3.8"',
-            'pytest-cov==5.0.0;python_version>="3.8"',
+            'pytest-cov>=5.0.0;python_version>="3.8"',
         ],
         # pip install -e .[flake8]
         # Usage: flake8
@@ -263,7 +264,7 @@ setup(
         # (An optional library for image-processing.)
         "pillow": [
             'Pillow==9.5.0;python_version<"3.8"',
-            'Pillow==10.2.0;python_version>="3.8"',
+            'Pillow>=10.3.0;python_version>="3.8"',
         ],
         # pip install -e .[pip-system-certs]
         # (If you see [SSL: CERTIFICATE_VERIFY_FAILED], then get this.)
